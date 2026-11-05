@@ -9,6 +9,10 @@
 * [Pràctica 2](RA1/Practica2.md)
 
 ## RA2- DNS
- [Pràctica 2](RA2/Practica2_DNS.md)
+
+* [DNS-1_Introduccio_i_conceptes](RA2/DNS-1_Introduccio_i_conceptes.md)
+* [DNS-2_Zones_i_resolucio](RA2/DNS-2_Zones_i_resolucio.md)
+* [DNS-3_Registres_de_recurs](RA2/DNS-3_Registres_de_recurs.md)
+* [Pràctica 2](RA2/Practica2_DNS.md)
 
  ## RA3-FTP
