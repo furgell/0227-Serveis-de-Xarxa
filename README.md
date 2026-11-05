@@ -7,3 +7,6 @@
 * [DHCP-3_Installacio_i_configuracio](RA1/DHCP-3_Installacio_i_configuracio.md)
 * [Pràctica 1](RA1/Practica1.md)
 * [Pràctica 2](RA1/Practica2.md)
+
+## RA2- DNS
+ [Pràctica 2](RA2/Practica2.md)
