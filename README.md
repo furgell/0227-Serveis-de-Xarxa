@@ -9,4 +9,4 @@
 * [Pràctica 2](RA1/Practica2.md)
 
 ## RA2- DNS
- [Pràctica 2](RA2/Pràctica 2 Servidor DNS a Ubuntu Server.md)
+ [Pràctica 2](RA2/Practica2_DNS.md)
