@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<question type="category"><category><text>$course$/top/M07 Serveis de Xarxa/DNS3 - Tipus de registres DNS</text></category></question>
+<question type="multichoice">
+<name><text>Naturalesa del DNS</text></name>
+<questiontext format="html"><text><![CDATA[<p>Segons el document, el DNS és una base de dades...</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>Cada servidor de noms gestiona la informació de la zona de la qual és autoritari.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[jeràrquica i distribuïda]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[centralitzada i jeràrquica]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[plana i distribuïda]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[relacional i centralitzada]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>On es guarda la info de zona</text></name>
+<questiontext format="html"><text><![CDATA[<p>On s'emmagatzema la informació dels hosts que formen una zona?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>La informació de cada zona s'emmagatzema en els registres de recurs (RR).</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[En els registres de recurs (Resource Records, RR)]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[En la memòria cau del client]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[En els servidors arrel exclusivament]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[En el fitxer de configuració del DHCP]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Forward mapping</text></name>
+<questiontext format="html"><text><![CDATA[<p>Què és el <i>forward mapping</i>?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>Forward mapping = resolució directa (nom → IP).</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[La resolució directa: nom de domini → adreça IP]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[La resolució inversa: adreça IP → nom de domini]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[La redirecció del correu cap al servidor MX]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[La còpia de la zona del master a l'slave]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Fitxers mínims de zona</text></name>
+<questiontext format="html"><text><![CDATA[<p>Quin d'aquests fitxers <b>NO</b> forma part del contingut mínim d'una zona segons el document?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>Els fitxers mínims són: resolució directa, resolució inversa, loopback i nodes arrel.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[Fitxer de servidors de correu]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Fitxer de resolució directa]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Fitxer de loopback]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Fitxer de nodes arrel]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Fitxers que es copien</text></name>
+<questiontext format="html"><text><![CDATA[<p>Quins fitxers de zona solen copiar-se d'una zona existent?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>Els fitxers de loopback i nodes arrel solen copiar-se d'una zona existent.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[Els de loopback i nodes arrel]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Els de resolució directa i inversa]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Només el de resolució directa]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Els que contenen els registres SOA i NS]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Fitxers de resolució inversa</text></name>
+<questiontext format="html"><text><![CDATA[<p>Quants fitxers de resolució inversa hi ha en una zona?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>Hi ha un fitxer per a cada subxarxa amb l'associació de cada IP al seu nom canònic.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[Un per a cada subxarxa]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Un per a cada host]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Un de sol per a tota la zona, sempre]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Cap; la resolució inversa la fan els servidors arrel]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Sintaxi general RR</text></name>
+<questiontext format="html"><text><![CDATA[<p>Quin és l'ordre correcte dels camps d'un registre de recurs?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>Sintaxi general: domini classe [ttl] tipus rdata.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[domini classe [ttl] tipus rdata]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[tipus domini classe [ttl] rdata]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[domini tipus classe rdata [ttl]]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[[ttl] domini tipus classe rdata]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Camp classe</text></name>
+<questiontext format="html"><text><![CDATA[<p>Quin valor pren actualment el camp <i>classe</i>?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>Actualment només pren el valor IN, per Internet.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[IN (Internet)]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[NS (Name Server)]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[A (Address)]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[TTL]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Camp opcional</text></name>
+<questiontext format="html"><text><![CDATA[<p>Quin camp d'un registre de recurs és opcional i sol definir-se de manera genèrica per a tot el fitxer?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>El ttl és opcional; usualment es defineix un TTL genèric per a tot el fitxer.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[ttl]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[classe]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[tipus]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[domini]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Nombre de SOA</text></name>
+<questiontext format="html"><text><![CDATA[<p>Quants registres SOA hi pot haver en una zona?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>Acostuma a ser el primer RR del fitxer i només n'hi pot haver un per zona.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[Només un]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Un per cada servidor de noms]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Almenys dos, un master i un slave]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Un per cada subxarxa]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Correu administrador SOA</text></name>
+<questiontext format="html"><text><![CDATA[<p>En el camp <code>admin.ns1.inf.ioc.cat.</code> d'un registre SOA, què representa el primer punt?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>Adreça de correu en format usuari.servidor: el primer punt equival a una @.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[Equival a una @ de l'adreça de correu]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Separa el nom del host del domini arrel]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Indica que el nom és relatiu]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Separa el TTL del nom de domini]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Paràmetre Retry</text></name>
+<questiontext format="html"><text><![CDATA[<p>Quin paràmetre de les opcions-slaves del SOA indica el temps d'espera per tornar a intentar un refresc si el secundari ha fallat?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>Retry: temps d'espera per tornar a intentar un refresc fallit.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[Retry]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Refresh]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Expire]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Minimum]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Paràmetre Expire</text></name>
+<questiontext format="html"><text><![CDATA[<p>Què defineix el paràmetre <b>Expire</b> del SOA?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>Expire: passat aquest temps sense refrescar, les dades del secundari perden l'autoritat.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[El temps a partir del qual les dades del secundari es consideren sense autoritat si no s'han refrescat]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[El temps entre cada refresc de dades del secundari]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[El número de versió de les dades]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[El TTL per defecte dels camps]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Paràmetre Minimum</text></name>
+<questiontext format="html"><text><![CDATA[<p>Què indica el paràmetre <b>Minimum</b> del SOA?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>Minimum: valor del TTL dels camps per defecte.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[El valor del TTL per defecte dels camps]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[El nombre mínim de servidors NS]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[El temps mínim entre reintents]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[El número de sèrie mínim acceptat]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Paràmetre Serial</text></name>
+<questiontext format="html"><text><![CDATA[<p>Per a què serveix el paràmetre <b>Serial</b> del SOA?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>Serial: número de sèrie de la versió de les dades.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[És el número de sèrie de la versió de les dades]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Indica el nombre de servidors secundaris]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[És el temps entre refrescos]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Identifica el número de port del servidor DNS]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Nombre de NS</text></name>
+<questiontext format="html"><text><![CDATA[<p>Quants servidors NS recomana l'estàndard DNS per a una zona?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>Hi haurà tantes entrades NS com servidors autoritatius; l'estàndard en recomana almenys dos.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[Almenys dos: un master i un slave]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Només un, el primari]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Un per a cada host de la zona]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Cap; el registre NS és opcional]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Host multihomed</text></name>
+<questiontext format="html"><text><![CDATA[<p>Un host <i>multihomed</i> té dues adreces IP. Com s'ha de definir?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>Cal un registre A per a cada adreça, amb el mateix nom de host a l'esquerra.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[Amb dos registres A, un per a cada IP, amb el mateix nom de host a l'esquerra]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Amb un registre A i un registre CNAME]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Amb un sol registre A amb les dues IP separades per comes]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Amb dos registres PTR i cap registre A]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Noms dels registres A</text></name>
+<questiontext format="html"><text><![CDATA[<p>Com s'anomenen els noms definits en registres A?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>Els noms definits en registres A són noms canònics; els àlies es defineixen amb CNAME.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[Noms canònics]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Àlies]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Noms relatius]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Noms arrel]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Restricció àlies</text></name>
+<questiontext format="html"><text><![CDATA[<p>Quina restricció tenen els àlies (CNAME) segons el document?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>Un àlies mai pot aparèixer a la part dreta d'una definició de RR.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[Mai poden aparèixer a la part dreta d'una definició de registre de recurs]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Mai poden tenir més de 8 caràcters]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Només es poden definir al fitxer de resolució inversa]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Han de tenir obligatòriament un registre PTR associat]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Cadena de resolució d'un àlies</text></name>
+<questiontext format="html"><text><![CDATA[<p>Quina és la cadena de resolució quan es consulta un àlies?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>La resolució segueix: àlies → CNAME → nom canònic → A → IP.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[àlies → CNAME → nom canònic → A → adreça IP]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[àlies → A → CNAME → nom canònic → adreça IP]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[àlies → PTR → nom canònic → adreça IP]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[àlies → NS → SOA → adreça IP]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Domini de la resolució inversa</text></name>
+<questiontext format="html"><text><![CDATA[<p>En un registre PTR, en quin domini especial s'escriu l'adreça IP?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>La IP s'escriu invertida en forma de domini in-addr.arpa.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[in-addr.arpa]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[ip.arpa.net]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[reverse.dns]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[root-servers.net]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>PTR per interfície</text></name>
+<questiontext format="html"><text><![CDATA[<p>Quantes entrades PTR calen a la zona?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>Cal una entrada PTR per a cada interfície de xarxa de la zona.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[Una per a cada interfície de xarxa de la zona]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Una per a cada àlies]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Una per a cada servidor de correu]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Una sola per a tota la subxarxa]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Registre MX</text></name>
+<questiontext format="html"><text><![CDATA[<p>Quina afirmació sobre el registre MX és correcta?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>Es pot afegir una entrada MX per a cada servidor de correu; no és obligatori que n'hi hagi cap.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[No és obligatori que n'hi hagi cap i se'n pot afegir un per a cada servidor de correu]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[És obligatori i només n'hi pot haver un per zona]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Ha de ser el primer registre del fitxer de zona]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Defineix la resolució inversa dels servidors de correu]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Registre AAAA</text></name>
+<questiontext format="html"><text><![CDATA[<p>Què defineix un registre AAAA?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>AAAA: adreça de host usant IPv6.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[Una adreça de host usant IPv6]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Quatre àlies per a un mateix host]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Una adreça de host usant IPv4]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Informació sobre el tipus d'ordinador]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Registre HINFO</text></name>
+<questiontext format="html"><text><![CDATA[<p>Quin registre conté informació sobre el tipus d'ordinador?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>HINFO (Host Information): informació sobre el tipus d'ordinador.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[HINFO]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[WKS]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[TXT]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[NULL]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Registre WKS</text></name>
+<questiontext format="html"><text><![CDATA[<p>Què conté un registre WKS?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>WKS: Well Known Services, llista de serveis del host.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[Una llista de serveis del host (Well Known Services)]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Un text descriptiu associat al domini]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[La bústia de correu del domini]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Un registre buit]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Ús de @</text></name>
+<questiontext format="html"><text><![CDATA[<p>En un fitxer de zona, què indica el símbol <b>@</b>?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>@ s'usa quan el nom de domini és el mateix que el domini origen.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[El nom de domini origen (el que s'està definint)]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[L'adreça de correu de l'administrador]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Que el registre és un àlies]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Que el TTL és el de per defecte]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Camp buit</text></name>
+<questiontext format="html"><text><![CDATA[<p>Què passa si el primer camp (nom de domini) d'un registre es deixa buit?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>Camp buit = mateix nom que el registre anterior.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[S'entén el mateix nom que el definit en el registre anterior]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[El registre s'ignora]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[S'entén el nom del servidor primari]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[S'entén el domini arrel (.)]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="multichoice">
+<name><text>Noms relatius</text></name>
+<questiontext format="html"><text><![CDATA[<p>Què passa amb un nom de domini que <b>no</b> acaba en punt?</p>]]></text></questiontext>
+<generalfeedback format="html"><text><![CDATA[<p>Als noms relatius (no acabats en punt) se'ls afegeix el nom de la zona.</p>]]></text></generalfeedback>
+<defaultgrade>1</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<single>true</single><shuffleanswers>true</shuffleanswers><answernumbering>abc</answernumbering>
+<answer fraction="100" format="html"><text><![CDATA[Se li afegeix automàticament el nom de domini origen (zona)]]></text><feedback><text>Correcte.</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Es considera un error de sintaxi]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Se li afegeix automàticament el domini arrel .com]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+<answer fraction="-33.33333" format="html"><text><![CDATA[Es tracta com un àlies]]></text><feedback><text>Incorrecte (resta 1/3).</text></feedback></answer>
+</question>
+<question type="cloze">
+<name><text>Cloze: Estructura del DNS</text></name>
+<questiontext format="html"><text><![CDATA[<p>El DNS és una base de dades jeràrquica i {1:MULTICHOICE:=distribuïda~%-50%centralitzada~%-50%local}. Cada servidor de noms gestiona la informació de la {1:MULTICHOICE:=zona~%-50%subxarxa~%-50%cache} de la qual és {1:MULTICHOICE:=autoritari~%-50%client~%-50%secundari}.</p><p>Aquesta informació s'emmagatzema en els {1:MULTICHOICE:=registres de recurs (RR)~%-50%fitxers de log~%-50%taules ARP}. La resolució {1:MULTICHOICE:=directa~%-50%inversa~%-50%recursiva} tradueix un nom de domini a una adreça IP, mentre que la resolució {1:MULTICHOICE:=inversa~%-50%directa~%-50%iterativa} tradueix una adreça IP a un nom de domini.</p>]]></text></questiontext>
+<generalfeedback><text></text></generalfeedback><penalty>0</penalty><hidden>0</hidden>
+</question>
+<question type="cloze">
+<name><text>Cloze: Fitxers de zona</text></name>
+<questiontext format="html"><text><![CDATA[<p>En qualsevol zona hi haurà almenys quatre fitxers: el de resolució directa, el de resolució inversa (un per a cada {1:MULTICHOICE:=subxarxa~%-50%host~%-50%servidor}), el de {1:MULTICHOICE:=loopback~%-50%correu~%-50%àlies} i el de nodes {1:MULTICHOICE:=arrel~%-50%fill~%-50%secundaris}.</p><p>Els dos últims solen {1:MULTICHOICE:=copiar-se d'una zona existent~%-50%generar-se automàticament pel client~%-50%eliminar-se després de configurar la zona}. El conjunt de tots els RR de totes les zones forma la base de dades {1:MULTICHOICE:=distribuïda~%-50%local~%-50%relacional} del DNS.</p>]]></text></questiontext>
+<generalfeedback><text></text></generalfeedback><penalty>0</penalty><hidden>0</hidden>
+</question>
+<question type="cloze">
+<name><text>Cloze: Completa el tipus de registre</text></name>
+<questiontext format="html"><text><![CDATA[<p>Completa cada línia amb el tipus de registre adequat:</p><pre>inf.ioc.cat.          IN {1:MULTICHOICE:=SOA~%-33.33333%NS~%-33.33333%A~%-33.33333%MX} ns1.inf.ioc.cat. admin.ns1.inf.ioc.cat. ( 1h 3h 1h 1w 1h )
+inf.ioc.cat.          IN {1:MULTICHOICE:=NS~%-33.33333%A~%-33.33333%SOA~%-33.33333%PTR} ns1.inf.ioc.cat.
+mahatma.inf.ioc.cat.  IN {1:MULTICHOICE:=A~%-33.33333%PTR~%-33.33333%CNAME~%-33.33333%NS} 192.168.0.2
+ftp.inf.ioc.cat.      IN {1:MULTICHOICE:=CNAME~%-33.33333%A~%-33.33333%PTR~%-33.33333%MX} mahatma.inf.ioc.cat.
+2.0.168.192.in-addr.arpa. IN {1:MULTICHOICE:=PTR~%-33.33333%A~%-33.33333%CNAME~%-33.33333%NS} mahatma.inf.ioc.cat.
+</pre>]]></text></questiontext>
+<generalfeedback><text></text></generalfeedback><penalty>0</penalty><hidden>0</hidden>
+</question>
+<question type="cloze">
+<name><text>Cloze: Opcions-slaves del SOA</text></name>
+<questiontext format="html"><text><![CDATA[<p>Els paràmetres opcions-slaves del SOA defineixen la comunicació entre el servidor {1:MULTICHOICE:=primari (master)~%-50%client~%-50%arrel} i els {1:MULTICHOICE:=secundaris (slaves)~%-50%clients~%-50%nodes arrel}.</p><ul><li>{1:MULTICHOICE:=Serial~%-33.33333%Refresh~%-33.33333%Retry~%-33.33333%Expire}: número de sèrie de la versió de les dades.</li><li>{1:MULTICHOICE:=Refresh~%-33.33333%Serial~%-33.33333%Retry~%-33.33333%Minimum}: temps entre cada refresc de dades del secundari.</li><li>{1:MULTICHOICE:=Retry~%-33.33333%Refresh~%-33.33333%Expire~%-33.33333%Minimum}: temps d'espera per tornar a intentar un refresc si ha fallat.</li><li>{1:MULTICHOICE:=Expire~%-33.33333%Retry~%-33.33333%Minimum~%-33.33333%Serial}: temps a partir del qual les dades del secundari es consideren sense autoritat.</li><li>{1:MULTICHOICE:=Minimum~%-33.33333%Expire~%-33.33333%Refresh~%-33.33333%Serial}: valor del TTL dels camps per defecte.</li></ul>]]></text></questiontext>
+<generalfeedback><text></text></generalfeedback><penalty>0</penalty><hidden>0</hidden>
+</question>
+<question type="cloze">
+<name><text>Cloze: Taula resum de registres</text></name>
+<questiontext format="html"><text><![CDATA[<table border='1' cellpadding='4'><tr><th>Tipus</th><th>Nom complet</th><th>Funció</th></tr><tr><td>SOA</td><td>{1:MULTICHOICE:=Start of Authority~%-50%Server Of Address~%-50%Source Of Alias}</td><td>Inici de zona autoritativa</td></tr><tr><td>NS</td><td>Name Server</td><td>{1:MULTICHOICE:=Servidor de noms autoritatiu~%-50%Servidor de correu~%-50%Àlies → nom canònic}</td></tr><tr><td>A</td><td>Address</td><td>{1:MULTICHOICE:=Nom → IP (directa)~%-50%IP → nom (inversa)~%-50%Àlies → nom canònic}</td></tr><tr><td>CNAME</td><td>{1:MULTICHOICE:=Canonical Name~%-50%Common Name~%-50%Central Name}</td><td>Àlies → nom canònic</td></tr><tr><td>PTR</td><td>{1:MULTICHOICE:=Pointer~%-50%Protocol~%-50%Primary}</td><td>{1:MULTICHOICE:=IP → nom (inversa)~%-50%Nom → IP (directa)~%-50%Servidor de correu}</td></tr><tr><td>MX</td><td>Mail eXchanger</td><td>{1:MULTICHOICE:=Servidor de correu~%-50%Servidor de noms~%-50%Text descriptiu}</td></tr></table>]]></text></questiontext>
+<generalfeedback><text></text></generalfeedback><penalty>0</penalty><hidden>0</hidden>
+</question>
+<question type="cloze">
+<name><text>Cloze: Abreviacions en fitxers de zona</text></name>
+<questiontext format="html"><text><![CDATA[<p>L'estàndard DNS permet abreviacions als fitxers de zona. El símbol {1:MULTICHOICE:=@~%-33.33333%\#~%-33.33333%*~%-33.33333%$} indica el nom de domini origen. Si el primer camp es deixa {1:MULTICHOICE:=buit~%-50%amb un punt~%-50%amb un asterisc}, s'entén el mateix nom que el definit en el registre {1:MULTICHOICE:=anterior~%-50%següent~%-50%SOA}. Als noms de domini que <b>no</b> acaben en {1:MULTICHOICE:=punt~%-50%coma~%-50%@} (noms relatius) se'ls afegeix automàticament el nom de la {1:MULTICHOICE:=zona~%-50%xarxa~%-50%màquina} que s'està definint.</p>]]></text></questiontext>
+<generalfeedback><text></text></generalfeedback><penalty>0</penalty><hidden>0</hidden>
+</question>
+<question type="essay">
+<name><text>Oberta: Directa vs inversa</text></name>
+<questiontext format="html"><text><![CDATA[<p>Explica la diferència entre la resolució directa i la resolució inversa. Indica quin registre de recurs s'utilitza en cada cas i posa'n un exemple de cada amb la sintaxi del document.</p>]]></text></questiontext>
+<defaultgrade>3</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>12</responsefieldlines><attachments>0</attachments>
+<graderinfo format="html"><text><![CDATA[<pre>Directa (forward mapping): nom de domini → IP, registre A. Ex.: mahatma.inf.ioc.cat. IN A 192.168.0.2. Inversa (reverse mapping): IP → nom canònic, registre PTR, amb la IP invertida al domini in-addr.arpa. Ex.: 2.0.168.192.in-addr.arpa. IN PTR mahatma.inf.ioc.cat. Hi ha un fitxer de directa i un fitxer d&#x27;inversa per a cada subxarxa.</pre>]]></text></graderinfo>
+</question>
+<question type="essay">
+<name><text>Oberta: Registre SOA</text></name>
+<questiontext format="html"><text><![CDATA[<p>Descriu el registre SOA: què indica, quants n'hi pot haver per zona, quins camps té (nomDomini, nsPrimari, admin) i per a què serveixen els cinc paràmetres de les opcions-slaves.</p>]]></text></questiontext>
+<defaultgrade>3</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>12</responsefieldlines><attachments>0</attachments>
+<graderinfo format="html"><text><![CDATA[<pre>Indica que el fitxer és la millor font de dades de la zona (servidor autoritari); sol ser el primer RR i només n&#x27;hi ha un per zona. nomDomini.: domini autoritari (punt final obligatori). nsPrimari.: servidor de noms primari. admin.nsPrimari.: correu de l&#x27;administrador (primer punt = @). Serial: versió de les dades; Refresh: temps entre refrescos del secundari; Retry: espera per reintentar si falla; Expire: temps després del qual el secundari perd l&#x27;autoritat; Minimum: TTL per defecte.</pre>]]></text></graderinfo>
+</question>
+<question type="essay">
+<name><text>Oberta: Escriu els registres</text></name>
+<questiontext format="html"><text><![CDATA[<p>Tenim el domini <b>empresa.cat</b> amb el servidor de noms primari <b>ns1.empresa.cat</b> (192.168.1.1) i un servidor web <b>web.empresa.cat</b> (192.168.1.10) que també ha de respondre com a <b>www.empresa.cat</b>. Escriu, amb la sintaxi del document: el registre SOA (usa 1h 3h 1h 1w 1h), el registre NS, els registres A, el registre CNAME i el registre PTR del servidor web.</p>]]></text></questiontext>
+<defaultgrade>3</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>12</responsefieldlines><attachments>0</attachments>
+<graderinfo format="html"><text><![CDATA[<pre>empresa.cat. IN SOA ns1.empresa.cat. admin.ns1.empresa.cat. ( 1h 3h 1h 1w 1h )
+empresa.cat. IN NS ns1.empresa.cat.
+ns1.empresa.cat. IN A 192.168.1.1
+web.empresa.cat. IN A 192.168.1.10
+www.empresa.cat. IN CNAME web.empresa.cat.
+10.1.168.192.in-addr.arpa. IN PTR web.empresa.cat.
+Valorar: punts finals, IN, IP invertida i ús correcte de CNAME (www és àlies; el canònic és web).</pre>]]></text></graderinfo>
+</question>
+<question type="essay">
+<name><text>Oberta: Troba l'error</text></name>
+<questiontext format="html"><text><![CDATA[<p>Observa aquest fragment de fitxer de zona i explica quin error hi ha i com el corregiries:<pre>web.empresa.cat.  IN A     192.168.1.10
+www.empresa.cat.  IN CNAME web.empresa.cat.
+intranet.empresa.cat. IN CNAME www.empresa.cat.</pre></p>]]></text></questiontext>
+<defaultgrade>3</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>12</responsefieldlines><attachments>0</attachments>
+<graderinfo format="html"><text><![CDATA[<pre>La tercera línia posa un àlies (www) a la part dreta d&#x27;un registre, i un àlies mai pot aparèixer a la part dreta d&#x27;una definició de RR. Correcció: intranet.empresa.cat. IN CNAME web.empresa.cat. (apuntant al nom canònic).</pre>]]></text></graderinfo>
+</question>
+<question type="essay">
+<name><text>Oberta: Abreviacions</text></name>
+<questiontext format="html"><text><![CDATA[<p>Explica les tres abreviacions que permet l'estàndard DNS en els fitxers de zona (@, camp buit i noms relatius) i posa un exemple de com s'interpretaria cadascuna en la zona <b>empresa.cat</b>.</p>]]></text></questiontext>
+<defaultgrade>3</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>12</responsefieldlines><attachments>0</attachments>
+<graderinfo format="html"><text><![CDATA[<pre>@ = nom de domini origen (@ IN NS ns1 ... equival a empresa.cat.). Camp buit = mateix nom que el registre anterior. Nom relatiu (sense punt final) = s&#x27;hi afegeix la zona: &#x27;web&#x27; → web.empresa.cat.</pre>]]></text></graderinfo>
+</question>
+<question type="essay">
+<name><text>Oberta: Flux de resolució</text></name>
+<questiontext format="html"><text><![CDATA[<p>Descriu les quatre fases del flux de resolució DNS que apareix al document i explica el paper dels registres A, CNAME i PTR en aquest procés.</p>]]></text></questiontext>
+<defaultgrade>3</defaultgrade><penalty>0</penalty><hidden>0</hidden>
+<responseformat>editor</responseformat><responserequired>1</responserequired><responsefieldlines>12</responsefieldlines><attachments>0</attachments>
+<graderinfo format="html"><text><![CDATA[<pre>Consulta: el client envia el nom de domini. Recerca: el servidor busca al fitxer de zona. Resolució: retorna el registre A o redirigeix amb CNAME/PTR. Resposta: el client rep la IP i estableix la connexió. A dona la IP; CNAME redirigeix l&#x27;àlies al nom canònic; PTR s&#x27;usa per a la inversa.</pre>]]></text></graderinfo>
+</question>
+</quiz>
