@@ -1,5 +1,7 @@
 # Solució · Pràctica 1: Servidor DNS a Windows Server
 
+📄 **Manual complet:** [Practica1_Servidor_DNS_Windows_Server_Solucio.pdf](Practica1_Servidor_DNS_Windows_Server_Solucio.pdf)
+
 Valors fets servir: **X = 2**, servidor **SERVERURGELL** (192.168.2.1), client PC01 (192.168.2.10).
 
 > La Part 5 (comprovacions des del client Windows 10) encara no està documentada.
