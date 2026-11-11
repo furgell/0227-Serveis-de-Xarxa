@@ -30,7 +30,7 @@ La configuració de xarxa de les plantilles d'Isard és al fitxer **`/etc/netpla
 
 ### Pla d'adreces
 
-**X** = el vostre número de llista. Tots els valors d'aquesta pràctica fan servir **X=2** com a exemple.
+**X** = el vostre número de llista. Tots els valors d'aquesta pràctica fan servir **X=2** com a exemple. Als fitxers i ordres de la pràctica la IP surt com a 192.168.X: substituïu sempre la X pel vostre número (amb X=2, 192.168.X.1 és 192.168.2.1, la zona inversa és 2.168.192.in-addr.arpa i el fitxer, db.192.168.2). Si la deixeu com a X, Bind9 i netplan donaran error.
 
 | Equip | Nom (hostname) | Interfície 2 | Màscara | Porta d'enllaç | DNS |
 | --- | --- | --- | --- | --- | --- |
@@ -41,8 +41,6 @@ La configuració de xarxa de les plantilles d'Isard és al fitxer **`/etc/netpla
 La porta d'enllaç de la interfície 2 es deixa buida. La sortida a Internet ja la dóna la interfície 1, i dues portes d'enllaç fan que la xarxa falli.
 
 El servidor surt a Internet per la interfície 1 i dóna servei DNS als clients per la interfície 2. El domini de la pràctica és **smx.com**.
-
-> **Truc per a la consola d'Isard (noVNC):** el teclat no envia bé alguns símbols com `-`, `|`, `{` o `:`, i en aquesta pràctica n'heu d'escriure molts. Connecteu-vos amb el **visor SPICE** d'Isard, o un cop tingueu la IP feta, entreu al servidor per SSH des del client (`ssh usuari@192.168.X.1`).
 
 ## Part 1: Preparar el servidor
 
@@ -87,19 +85,27 @@ Totes les ordres del servidor es fan com a root. Entreu-hi amb `sudo -i`.
        enp2s0:
          dhcp4: false
          addresses:
-           - 192.168.2.1/24
+           - 192.168.X.1/24
          nameservers:
-           addresses: [127.0.0.1]
+           addresses: [192.168.X.1]
            search: [smx.com]
    ```
    - **addresses**: 192.168.X.1/24 (el /24 és la màscara 255.255.255.0).
    - **Porta d'enllaç**: no n'hi poseu (no hi ha cap `routes` ni `gateway4` a la interfície 2).
-   - **nameservers**: 127.0.0.1, el mateix servidor.
+   - **nameservers**: 192.168.X.1, la IP del mateix servidor. No hi poseu 127.0.0.1: Ubuntu envia les consultes DNS per la interfície on està configurat el DNS (enp2s0), i el 127.0.0.1 només existeix a la interfície de loopback (lo), així que no funcionaria.
    - Al YAML només es fan servir **espais**, mai tabulacions, i el sagnat ha de quadrar exactament.
 4. Aquest fitxer el genera **cloud-init** i es pot sobreescriure en reiniciar. Perquè no es perdin els canvis, desactiva la configuració de xarxa de cloud-init:
 
+   Crea un fitxer nou amb nano:
+
    ```bash
-   echo "network: {config: disabled}" > /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
+   nano /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
+   ```
+
+   Escriu-hi aquesta única línia, desa (Ctrl+O, Intro) i surt (Ctrl+X):
+
+   ```
+   network: {config: disabled}
    ```
 5. Aplica els canvis:
 
@@ -163,9 +169,9 @@ A Ubuntu el tallafoc (**ufw**) ve desactivat per defecte i el ping funciona. No 
    
            dnssec-validation auto;
    
-           listen-on { 127.0.0.1; 192.168.2.1; };
+           listen-on { 127.0.0.1; 192.168.X.1; };
            listen-on-v6 { none; };
-           allow-query { localhost; 192.168.2.0/24; };
+           allow-query { localhost; 192.168.X.0/24; };
    };
    ```
    - **listen-on**: només escolta a la IP de la interfície 2 (i a ell mateix), no a la xarxa d'Isard.
@@ -210,9 +216,9 @@ A Bind9 cada zona es fa en dos passos: es **declara** a `named.conf.local` i es 
            file "/etc/bind/db.smx.com";
    };
    
-   zone "2.168.192.in-addr.arpa" {
+   zone "X.168.192.in-addr.arpa" {
            type master;
-           file "/etc/bind/db.192.168.2";
+           file "/etc/bind/db.192.168.X";
    };
    ```
    - **type master**: és una zona principal (l'equivalent de *Zona principal* a Windows).
@@ -249,8 +255,8 @@ A Bind9 cada zona es fa en dos passos: es **declara** a `named.conf.local` i es 
 1. Parteix de la plantilla `db.127`:
 
    ```bash
-   cp /etc/bind/db.127 /etc/bind/db.192.168.2
-   nano /etc/bind/db.192.168.2
+   cp /etc/bind/db.127 /etc/bind/db.192.168.X
+   nano /etc/bind/db.192.168.X
    ```
 2. Deixa-la així:
 
@@ -275,11 +281,11 @@ Encara no reinicieu el servei: el registre NS apunta a `smxservidor`, que es cre
 1. Afegeix al final de `/etc/bind/db.smx.com` el registre **A** del servidor:
 
    ```
-   smxservidor     IN      A       192.168.2.1
+   smxservidor     IN      A       192.168.X.1
    ```
 
    El FQDN queda `smxservidor.smx.com`, perquè el nom no porta punt final i Bind9 hi afegeix el domini.
-2. Afegeix al final de `/etc/bind/db.192.168.2` el registre **PTR** associat:
+2. Afegeix al final de `/etc/bind/db.192.168.X` el registre **PTR** associat:
 
    ```
    1       IN      PTR     smxservidor.smx.com.
@@ -290,7 +296,7 @@ Encara no reinicieu el servei: el registre NS apunta a `smxservidor`, que es cre
 
    ```bash
    named-checkzone smx.com /etc/bind/db.smx.com
-   named-checkzone 2.168.192.in-addr.arpa /etc/bind/db.192.168.2
+   named-checkzone X.168.192.in-addr.arpa /etc/bind/db.192.168.X
    ```
 
    Totes dues han de dir `OK`.
@@ -311,7 +317,7 @@ Executa al servidor:
 
 ```bash
 nslookup smxservidor.smx.com 127.0.0.1
-nslookup 192.168.2.1 127.0.0.1
+nslookup 192.168.X.1 127.0.0.1
 dig smxservidor.smx.com
 ```
 
@@ -348,9 +354,9 @@ El client ha d'estar a la mateixa xarxa interna d'Isard que el servidor (interf�
        enp2s0:
          dhcp4: false
          addresses:
-           - 192.168.2.10/24
+           - 192.168.X.10/24
          nameservers:
-           addresses: [192.168.2.1]
+           addresses: [192.168.X.1]
            search: [smx.com]
    ```
    - **addresses**: 192.168.X.10/24.
@@ -359,7 +365,12 @@ El client ha d'estar a la mateixa xarxa interna d'Isard que el servidor (interf�
 3. Desactiva cloud-init per a la xarxa i aplica els canvis:
 
    ```bash
-   echo "network: {config: disabled}" | sudo tee /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
+   sudo nano /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
+   ```
+
+   Escriu-hi la línia `network: {config: disabled}`, desa i surt. Després aplica els canvis:
+
+   ```bash
    sudo chmod 600 /etc/netplan/50-cloud-init.yaml
    sudo netplan apply
    ```
@@ -380,10 +391,10 @@ Executa al client:
 ```bash
 ip a
 resolvectl status
-ping -c 4 192.168.2.1
+ping -c 4 192.168.X.1
 ping -c 4 smxservidor.smx.com
 nslookup smxservidor.smx.com
-nslookup 192.168.2.1
+nslookup 192.168.X.1
 ```
 
 | Ordre | Què ha de sortir |
@@ -418,7 +429,7 @@ Comprova-ho des del client:
 
 ```bash
 nslookup pc01.smx.com
-nslookup 192.168.2.10
+nslookup 192.168.X.10
 nslookup www.smx.com
 ```
 
